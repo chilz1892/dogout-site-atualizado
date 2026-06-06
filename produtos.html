@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos | DogOut Petshop</title>
+    <link rel="stylesheet" href="produtos.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="topbar">
+            <a class="brand" href="index.html" aria-label="DogOut Petshop">DogOut</a>
+
+            <label class="search" aria-label="Buscar produto cadastrado">
+                <span aria-hidden="true">🔎</span>
+                <input id="buscaProduto" type="search" placeholder="Buscar por nome, marca ou categoria">
+            </label>
+
+            <nav class="quick-actions" aria-label="Acoes principais">
+                <a href="cadastro-produto.html">Cadastrar</a>
+                <a href="produtos.html"><span class="quick-icon product-icon" aria-hidden="true"></span><span>Produtos</span></a>
+            </nav>
+        </div>
+
+        <nav class="category-nav" aria-label="Categorias de produtos">
+            <button class="filter active" type="button" data-category="todos">Todos</button>
+            <button class="filter" type="button" data-category="Ração">Rações</button>
+            <button class="filter" type="button" data-category="Petiscos">Petiscos</button>
+            <button class="filter" type="button" data-category="Brinquedos">Brinquedos</button>
+            <button class="filter" type="button" data-category="Limpeza">Higiene</button>
+            <button class="filter" type="button" data-category="Farmácia">Saúde</button>
+            <button class="filter" type="button" data-category="Acessórios">Acessórios</button>
+        </nav>
+    </header>
+<main class="page">
+        <section class="hero-list" aria-labelledby="titulo-produtos">
+            <div>
+                <p class="eyebrow">Estoque DogOut</p>
+                <h1 id="titulo-produtos">Produtos cadastrados</h1>
+                <span>Veja todos os itens adicionados ao sistema, com preço, quantidade e categoria.</span>
+            </div>
+            <a class="new-product" href="cadastro-produto.html">Cadastrar novo</a>
+        </section>
+
+        <section class="summary" aria-label="Resumo do estoque">
+            <article>
+                <span id="totalProdutos">0</span>
+                <strong>Produtos</strong>
+            </article>
+            <article>
+                <span id="totalEstoque">0</span>
+                <strong>Itens em estoque</strong>
+            </article>
+            <article>
+                <span id="totalCategorias">0</span>
+                <strong>Categorias</strong>
+            </article>
+        </section>
+
+        <p id="statusProdutos" class="status" role="status" aria-live="polite">Carregando produtos...</p>
+
+        <section id="listaProdutos" class="products-grid" aria-label="Lista de produtos"></section>
+    </main>
+
+    <footer>
+        <p>DogOut Petshop - Sistema de gerenciamento de produtos</p>
+    </footer>
+
+    <script src="produtos.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
